@@ -315,9 +315,9 @@ GameObject:
   - component: {fileID: 1479187793}
   - component: {fileID: 1479187792}
   - component: {fileID: 1479187796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,7 +517,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 72
   m_CollisionDetection: 0
 --- !u!23 &1845211175
 MeshRenderer:
@@ -594,6 +594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
+  _jumpForce: 5
+  Grounded: 0
 --- !u!65 &1845211179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,5 +607,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.38313025, y: 0.074429244, z: 0.384786}
-  m_Center: {x: 0.028122336, y: 0.030000001, z: -0.07867557}
+  m_Size: {x: 0.38313025, y: 1.9337331, z: 0.384786}
+  m_Center: {x: 0.028122336, y: 0.959652, z: -0.07867557}
