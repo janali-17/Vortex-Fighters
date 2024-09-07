@@ -24,4 +24,12 @@ public class PlayerAnimations : MonoBehaviour
     {
         _animator.SetTrigger("Jumped");
     }
+    public void PunchAnim()
+    {
+        _animator.SetTrigger("Punch");
+    }
+    public void KickAnim()
+    {
+        _animator.SetTrigger("Kick");
+    }
 }

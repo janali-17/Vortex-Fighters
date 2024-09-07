@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
+        Attack();
     }
 
     private void Movement()
@@ -47,6 +48,17 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && Grounded == true)
         {
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x,_jumpForce,_rigidbody.velocity.z);
+        }
+    }
+    private void Attack()
+    {
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            _anims.PunchAnim();
+        }
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            _anims.KickAnim();
         }
     }
 
