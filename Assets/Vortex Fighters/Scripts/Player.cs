@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -10,14 +9,18 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _jumpForce = 5.0f;
     [SerializeField]
+    private float _rotationSpeed = 2.0f;
+    [SerializeField]
     private bool Grounded;
 
     //Handles
     private Rigidbody _rigidbody;
+    private PlayerAnimations _anims;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _anims = GetComponent<PlayerAnimations>();
     }
 
     void Update()
@@ -27,7 +30,19 @@ public class Player : MonoBehaviour
 
     private void Movement()
     {
-     transform.Translate (Input.GetAxis("Horizontal")*Time.deltaTime * _speed, 0.0f,Input.GetAxis("Vertical") * Time.deltaTime * _speed);
+      float Horizontal = Input.GetAxis("Horizontal");
+      float Vertical = Input.GetAxis("Vertical");
+
+        Vector3 MovementDirection = new Vector3(Horizontal, 0.0f, Vertical).normalized;
+        transform.Translate(MovementDirection *Time.deltaTime * _speed,Space.World);
+
+        if(MovementDirection.magnitude > 0.5f)
+        {
+            Quaternion toRotate = Quaternion.LookRotation(MovementDirection,Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate,_rotationSpeed* Time.deltaTime);
+        }
+
+        _anims.MoveAnim(Horizontal, Vertical);
 
         if(Input.GetKeyDown(KeyCode.Space) && Grounded == true)
         {
@@ -49,6 +64,8 @@ public class Player : MonoBehaviour
         {
             Debug.Log("jumping");
             Grounded = false;
+            _anims.JumpAnim();
+
         }   
     }
 
