@@ -26,7 +26,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
-        Attack();
+        AttackPlayer();
+
+
     }
 
     private void Movement()
@@ -50,11 +52,12 @@ public class Player : MonoBehaviour
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x,_jumpForce,_rigidbody.velocity.z);
         }
     }
-    private void Attack()
+    private void AttackPlayer()
     {
         if(Input.GetKeyDown(KeyCode.M))
         {
             _anims.PunchAnim();
+            Attack.Intance.PunchAttack = true;   
         }
         else if (Input.GetKeyDown(KeyCode.N))
         {
