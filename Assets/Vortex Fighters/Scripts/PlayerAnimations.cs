@@ -33,11 +33,23 @@ public class PlayerAnimations : MonoBehaviour
     public void KickAnim()
     {
         _animator.SetTrigger("Kick");
+        StartCoroutine(WaitFor2SecondsKick());
+    }
+    public void HitAnim()
+    {
+        _animator.SetTrigger("Hit");
     }
 
     IEnumerator WaitFor2Seconds()
     {
         yield return new WaitForSeconds(0.3f);
-        Attack.Intance.PunchAttack = false;
+        Attack.Intance.PunchAttackp1 = false;
+        Attack.Intance.PunchAttackp2 = false;
+    }
+    IEnumerator WaitFor2SecondsKick()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Attack.Intance.KickAttackp1 = false;
+        Attack.Intance.KickAttackp2 = false;
     }
 }

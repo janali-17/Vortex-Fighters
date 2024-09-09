@@ -178,6 +178,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d81d0e6f22b34943a12a965c6f6ca40, type: 3}
+--- !u!1 &98526830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100036, guid: c1b3dfa6513051648a87476ced70583a,
+    type: 3}
+  m_PrefabInstance: {fileID: 675625264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &98526832
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98526830}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: -0.11, y: 0, z: 0}
 --- !u!1 &149930131
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,25 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d265face5bf694aaa5aefd2e13f023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 778688626}
-  boneAxis: {x: 0, y: 1, z: 0}
-  radius: 0.05
-  isUseEachBoneForceSettings: 0
-  stiffnessForce: 0.01
-  dragForce: 0.4
-  springForce: {x: 0, y: -0.0001, z: 0}
-  colliders:
-  - {fileID: 2053725619}
-  - {fileID: 221136530}
-  debug: 1
-  threshold: 0.01
-  springLength: 0
-  localRotation: {x: 0, y: 0, z: 0, w: 0}
-  trs: {fileID: 0}
-  currTipPos: {x: 0, y: 0, z: 0}
-  prevTipPos: {x: 0, y: 0, z: 0}
-  org: {fileID: 0}
-  managerRef: {fileID: 0}
 --- !u!1 &221136528
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02557df4d8373034ba7e1b3d79663985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1 &237736353
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02557df4d8373034ba7e1b3d79663985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1 &261619808
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b72bffd9fe8bedf41923ab46ef6595d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PunchAttack: 0
+  PunchAttackp1: 0
+  PunchAttackp2: 0
+  KickAttackp1: 0
+  KickAttackp2: 0
 --- !u!4 &261619810
 Transform:
   m_ObjectHideFlags: 0
@@ -479,18 +480,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 436633310}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &436633312 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400004, guid: 5d81d0e6f22b34943a12a965c6f6ca40,
-    type: 3}
-  m_PrefabInstance: {fileID: 436633310}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &436633313 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400006, guid: 5d81d0e6f22b34943a12a965c6f6ca40,
-    type: 3}
-  m_PrefabInstance: {fileID: 436633310}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &436633314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 5d81d0e6f22b34943a12a965c6f6ca40,
@@ -521,25 +510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d265face5bf694aaa5aefd2e13f023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 436633313}
-  boneAxis: {x: 0, y: 1, z: 0}
-  radius: 0.05
-  isUseEachBoneForceSettings: 0
-  stiffnessForce: 0.01
-  dragForce: 0.4
-  springForce: {x: 0, y: -0.0001, z: 0}
-  colliders:
-  - {fileID: 1720656530}
-  - {fileID: 237736355}
-  debug: 1
-  threshold: 0.01
-  springLength: 0
-  localRotation: {x: 0, y: 0, z: 0, w: 0}
-  trs: {fileID: 0}
-  currTipPos: {x: 0, y: 0, z: 0}
-  prevTipPos: {x: 0, y: 0, z: 0}
-  org: {fileID: 0}
-  managerRef: {fileID: 0}
 --- !u!114 &436633318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,25 +522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d265face5bf694aaa5aefd2e13f023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 436633313}
-  boneAxis: {x: 0, y: 1, z: 0}
-  radius: 0.05
-  isUseEachBoneForceSettings: 0
-  stiffnessForce: 0.01
-  dragForce: 0.4
-  springForce: {x: 0, y: -0.0001, z: 0}
-  colliders:
-  - {fileID: 1720656530}
-  - {fileID: 237736355}
-  debug: 1
-  threshold: 0.01
-  springLength: 0
-  localRotation: {x: 0, y: 0, z: 0, w: 0}
-  trs: {fileID: 0}
-  currTipPos: {x: 0, y: 0, z: 0}
-  prevTipPos: {x: 0, y: 0, z: 0}
-  org: {fileID: 0}
-  managerRef: {fileID: 0}
 --- !u!114 &436633319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,25 +534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d265face5bf694aaa5aefd2e13f023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 436633312}
-  boneAxis: {x: 0, y: 1, z: 0}
-  radius: 0.05
-  isUseEachBoneForceSettings: 0
-  stiffnessForce: 0.01
-  dragForce: 0.4
-  springForce: {x: 0, y: -0.0001, z: 0}
-  colliders:
-  - {fileID: 1720656530}
-  - {fileID: 237736355}
-  debug: 1
-  threshold: 0.01
-  springLength: 0
-  localRotation: {x: 0, y: 0, z: 0, w: 0}
-  trs: {fileID: 0}
-  currTipPos: {x: 0, y: 0, z: 0}
-  prevTipPos: {x: 0, y: 0, z: 0}
-  org: {fileID: 0}
-  managerRef: {fileID: 0}
 --- !u!1 &497153078
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,55 +645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ad2c0141092cc42a58a71ebd6d1c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dynamicRatio: 1
-  stiffnessForce: 0.01
-  stiffnessCurve:
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  dragForce: 1
-  dragCurve:
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  springBones:
-  - {fileID: 163143631}
-  - {fileID: 778688627}
-  - {fileID: 892975847}
 --- !u!1001 &675625264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,6 +652,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1150260508}
     m_Modifications:
+    - target: {fileID: 100036, guid: c1b3dfa6513051648a87476ced70583a, type: 3}
+      propertyPath: m_TagString
+      value: Foot
+      objectReference: {fileID: 0}
     - target: {fileID: 100094, guid: c1b3dfa6513051648a87476ced70583a, type: 3}
       propertyPath: m_TagString
       value: Hand
@@ -890,55 +777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ad2c0141092cc42a58a71ebd6d1c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dynamicRatio: 1
-  stiffnessForce: 0.01
-  stiffnessCurve:
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  dragForce: 1
-  dragCurve:
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  springBones:
-  - {fileID: 436633319}
-  - {fileID: 436633318}
-  - {fileID: 436633317}
 --- !u!1 &703585540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,12 +876,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 12575125}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &778688626 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400004, guid: 5d81d0e6f22b34943a12a965c6f6ca40,
-    type: 3}
-  m_PrefabInstance: {fileID: 12575125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &778688627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,25 +888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d265face5bf694aaa5aefd2e13f023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 892975846}
-  boneAxis: {x: 0, y: 1, z: 0}
-  radius: 0.05
-  isUseEachBoneForceSettings: 0
-  stiffnessForce: 0.01
-  dragForce: 0.4
-  springForce: {x: 0, y: -0.0001, z: 0}
-  colliders:
-  - {fileID: 2053725619}
-  - {fileID: 221136530}
-  debug: 1
-  threshold: 0.01
-  springLength: 0
-  localRotation: {x: 0, y: 0, z: 0, w: 0}
-  trs: {fileID: 0}
-  currTipPos: {x: 0, y: 0, z: 0}
-  prevTipPos: {x: 0, y: 0, z: 0}
-  org: {fileID: 0}
-  managerRef: {fileID: 0}
 --- !u!1 &794570304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,7 +916,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.6132076, g: 0.5524653, b: 0.5524653, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1167,6 +980,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &826380262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100036, guid: c1b3dfa6513051648a87476ced70583a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1800108697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &826380264
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826380262}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: -0.11, y: 0, z: 0}
 --- !u!1 &846175183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,8 +1102,8 @@ Camera:
   m_GameObject: {fileID: 874542991}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.19607845, g: 0.20392159, b: 0.227451, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1358,12 +1190,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 12575125}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &892975846 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400006, guid: 5d81d0e6f22b34943a12a965c6f6ca40,
-    type: 3}
-  m_PrefabInstance: {fileID: 12575125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &892975847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,25 +1202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d265face5bf694aaa5aefd2e13f023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 892975846}
-  boneAxis: {x: 0, y: 1, z: 0}
-  radius: 0.05
-  isUseEachBoneForceSettings: 0
-  stiffnessForce: 0.01
-  dragForce: 0.4
-  springForce: {x: 0, y: -0.0001, z: 0}
-  colliders:
-  - {fileID: 2053725619}
-  - {fileID: 221136530}
-  debug: 1
-  threshold: 0.01
-  springLength: 0
-  localRotation: {x: 0, y: 0, z: 0, w: 0}
-  trs: {fileID: 0}
-  currTipPos: {x: 0, y: 0, z: 0}
-  prevTipPos: {x: 0, y: 0, z: 0}
-  org: {fileID: 0}
-  managerRef: {fileID: 0}
 --- !u!1 &997085253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,8 +1356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _jumpForce: 5
-  _rotationSpeed: 1000
   Grounded: 0
+  opponentPos: {fileID: 1845211177}
 --- !u!136 &1150260505
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1624,7 +1431,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296352538}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.06807064
@@ -2044,7 +1851,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02557df4d8373034ba7e1b3d79663985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1001 &1800108697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2052,6 +1858,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1845211177}
     m_Modifications:
+    - target: {fileID: 100036, guid: c1b3dfa6513051648a87476ced70583a, type: 3}
+      propertyPath: m_TagString
+      value: Foot
+      objectReference: {fileID: 0}
     - target: {fileID: 100094, guid: c1b3dfa6513051648a87476ced70583a, type: 3}
       propertyPath: m_TagString
       value: Hand
@@ -2184,7 +1994,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845211172}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.23598105
   m_Height: 2.05331
@@ -2243,8 +2053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _jumpForce: 5
-  _rotationSpeed: 1000
   Grounded: 0
+  opponentPos: {fileID: 1150260508}
 --- !u!65 &1845211179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2527,4 +2337,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02557df4d8373034ba7e1b3d79663985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2

@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public bool PunchAttack;
+    public bool PunchAttackp1;
+    public bool PunchAttackp2;
+    public bool KickAttackp1;
+    public bool KickAttackp2;
 
   private static  Attack _intance;
     public static Attack Intance

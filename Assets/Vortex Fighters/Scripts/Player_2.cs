@@ -9,9 +9,9 @@ public class Player_2 : MonoBehaviour
     [SerializeField]
     private float _jumpForce = 5.0f;
     [SerializeField]
-    private float _rotationSpeed = 2.0f;
-    [SerializeField]
     private bool Grounded;
+    [SerializeField]
+    private Transform opponentPos;
 
     //Handles
     private Rigidbody _rigidbody;
@@ -27,8 +27,7 @@ public class Player_2 : MonoBehaviour
     {
         Movement();
         AttackPlayer();
-
-
+        transform.LookAt(opponentPos);
     }
 
     private void Movement()
@@ -38,13 +37,6 @@ public class Player_2 : MonoBehaviour
 
         Vector3 MovementDirection = new Vector3(Horizontal, 0.0f, Vertical).normalized;
         transform.Translate(MovementDirection * Time.deltaTime * _speed, Space.World);
-
-        if (MovementDirection.magnitude > 0.5f)
-        {
-            Quaternion toRotate = Quaternion.LookRotation(MovementDirection, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, _rotationSpeed * Time.deltaTime);
-        }
-
         _anims.MoveAnim(Horizontal, Vertical);
 
         if (Input.GetKeyDown(KeyCode.Space) && Grounded == true)
@@ -57,11 +49,12 @@ public class Player_2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             _anims.PunchAnim();
-            Attack.Intance.PunchAttack = true;
+            Attack.Intance.PunchAttackp2 = true;
         }
         else if (Input.GetKeyDown(KeyCode.N))
         {
             _anims.KickAnim();
+            Attack.Intance.KickAttackp2 = true;
         }
     }
 
@@ -81,6 +74,13 @@ public class Player_2 : MonoBehaviour
             Grounded = false;
             _anims.JumpAnim();
 
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if((other.tag == "Hand"|| other.tag == "Foot") && (Attack.Intance.PunchAttackp1 == true || Attack.Intance.KickAttackp1 == true))
+        {
+            _anims.HitAnim();
         }
     }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Hand
+  - Foot
   layers:
   - Default
   - TransparentFX
