@@ -54,12 +54,12 @@ public class Player : MonoBehaviour
     }
     private void AttackPlayer()
     {
-        if(Input.GetKeyDown(KeyCode.M))
+        if(Input.GetKeyDown(KeyCode.T))
         {
             _anims.PunchAnim();
             Attack.Intance.PunchAttack = true;   
         }
-        else if (Input.GetKeyDown(KeyCode.N))
+        else if (Input.GetKeyDown(KeyCode.Y))
         {
             _anims.KickAnim();
         }

@@ -45,7 +45,7 @@ public class Player_2 : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, _rotationSpeed * Time.deltaTime);
         }
 
-        //_anims.MoveAnim(Horizontal, Vertical);
+        _anims.MoveAnim(Horizontal, Vertical);
 
         if (Input.GetKeyDown(KeyCode.Space) && Grounded == true)
         {
