@@ -28,7 +28,10 @@ public class Player : MonoBehaviour
         Movement();
         AttackPlayer();
         transform.LookAt(opponentPos);
-
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            UI_Manager.Instance.PauseGame();
+        }
     }
 
     private void Movement()
@@ -41,7 +44,7 @@ public class Player : MonoBehaviour
 
         _anims.MoveAnim(Horizontal, Vertical);
 
-        if(Input.GetKeyDown(KeyCode.Space) && Grounded == true)
+        if(Input.GetKeyDown(KeyCode.R) && Grounded == true)
         {
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x,_jumpForce,_rigidbody.velocity.z);
         }

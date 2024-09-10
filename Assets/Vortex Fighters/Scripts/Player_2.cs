@@ -39,7 +39,7 @@ public class Player_2 : MonoBehaviour
         transform.Translate(MovementDirection * Time.deltaTime * _speed, Space.World);
         _anims.MoveAnim(Horizontal, Vertical);
 
-        if (Input.GetKeyDown(KeyCode.Space) && Grounded == true)
+        if (Input.GetKeyDown(KeyCode.B) && Grounded == true)
         {
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _jumpForce, _rigidbody.velocity.z);
         }

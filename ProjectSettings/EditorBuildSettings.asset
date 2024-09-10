@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Vortex Fighters/Scenes/Main_Menu.unity
+    guid: 02bde6a6c7eb76c49bdb608c86a44969
+  - enabled: 1
+    path: Assets/Vortex Fighters/Scenes/Fighting_Ground.unity
+    guid: b2cd1301e4a946f44ab1656322481175
   m_configObjects: {}
