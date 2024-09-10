@@ -39,6 +39,10 @@ public class PlayerAnimations : MonoBehaviour
     {
         _animator.SetTrigger("Hit");
     }
+    public void DeathAnim()
+    {
+        _animator.SetTrigger("Death");
+    }
 
     IEnumerator WaitFor2Seconds()
     {

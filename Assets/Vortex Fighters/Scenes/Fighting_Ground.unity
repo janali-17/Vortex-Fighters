@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 219781077}
   - component: {fileID: 219781076}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P2_Image 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 225224709}
   - component: {fileID: 225224708}
   m_Layer: 5
-  m_Name: 'Image '
+  m_Name: P2_Image 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 289842241}
   - component: {fileID: 289842240}
   m_Layer: 5
-  m_Name: Health_Bar_P2
+  m_Name: Health_Bar_P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1131,7 +1131,7 @@ GameObject:
   - component: {fileID: 508735555}
   - component: {fileID: 508735554}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P2_Image 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1223,7 +1223,7 @@ GameObject:
   - component: {fileID: 588506422}
   - component: {fileID: 588506421}
   m_Layer: 5
-  m_Name: Health_Bar_P1
+  m_Name: Health_Bar_P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1435,6 +1435,7 @@ GameObject:
   - component: {fileID: 696754561}
   - component: {fileID: 696754560}
   - component: {fileID: 696754559}
+  - component: {fileID: 696754563}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1523,6 +1524,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &696754563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696754558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6ef7f40aedb1a48b341fba379380f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _P1:
+  - {fileID: 1224950749}
+  - {fileID: 1932305444}
+  - {fileID: 802872334}
+  - {fileID: 1724494347}
+  - {fileID: 1140718030}
+  - {fileID: 1678979377}
+  _P2:
+  - {fileID: 1591340290}
+  - {fileID: 1571920218}
+  - {fileID: 219781076}
+  - {fileID: 2075741036}
+  - {fileID: 508735554}
+  - {fileID: 225224708}
 --- !u!1 &703585540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,7 +1945,7 @@ GameObject:
   - component: {fileID: 802872335}
   - component: {fileID: 802872334}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P1_Image 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2193,7 +2220,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
+  field of view: 89
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2218,8 +2245,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874542991}
-  m_LocalRotation: {x: 0.25375777, y: 0.0008441296, z: -0.00022145317, w: 0.96726745}
-  m_LocalPosition: {x: 0.25479394, y: 5.65, z: -15.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.99, y: 3.3300002, z: -9.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2382,7 +2409,7 @@ GameObject:
   - component: {fileID: 1140718031}
   - component: {fileID: 1140718030}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P1_Image 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2507,6 +2534,7 @@ MonoBehaviour:
   _jumpForce: 5
   Grounded: 0
   opponentPos: {fileID: 1845211177}
+  _Player2Lives: 6
 --- !u!136 &1150260505
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2572,7 +2600,7 @@ GameObject:
   - component: {fileID: 1224950750}
   - component: {fileID: 1224950749}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P1_Image 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3208,7 +3236,7 @@ GameObject:
   - component: {fileID: 1571920219}
   - component: {fileID: 1571920218}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P2_Image 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3474,7 +3502,7 @@ GameObject:
   - component: {fileID: 1591340291}
   - component: {fileID: 1591340290}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P2_Image 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3623,7 +3651,7 @@ GameObject:
   - component: {fileID: 1678979378}
   - component: {fileID: 1678979377}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P1_Image 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3820,7 +3848,7 @@ GameObject:
   - component: {fileID: 1724494348}
   - component: {fileID: 1724494347}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P1_Image 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4322,7 +4350,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!33 &1845211176
 MeshFilter:
@@ -4363,6 +4391,7 @@ MonoBehaviour:
   _jumpForce: 5
   Grounded: 0
   opponentPos: {fileID: 1150260508}
+  _PlayerLives: 6
 --- !u!65 &1845211179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4485,7 +4514,7 @@ GameObject:
   - component: {fileID: 1932305445}
   - component: {fileID: 1932305444}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P1_Image 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4810,7 +4839,7 @@ GameObject:
   - component: {fileID: 2075741037}
   - component: {fileID: 2075741036}
   m_Layer: 5
-  m_Name: Image
+  m_Name: P2_Image 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

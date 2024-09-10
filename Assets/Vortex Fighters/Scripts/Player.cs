@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     private bool Grounded;
     [SerializeField]
     private Transform opponentPos;
+    [SerializeField]
+    public int _PlayerLives = 6;
+    private bool _IsDead = false;   
+
 
     //Handles
     private Rigidbody _rigidbody;
@@ -25,12 +29,21 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (_IsDead == true)
+        {
+            return;
+        }
         Movement();
         AttackPlayer();
         transform.LookAt(opponentPos);
         if(Input.GetKey(KeyCode.Escape))
         {
             UI_Manager.Instance.PauseGame();
+        }
+        if (_PlayerLives == 0)
+        {   
+            _anims.DeathAnim();
+            _IsDead = true;
         }
     }
 
@@ -81,11 +94,26 @@ public class Player : MonoBehaviour
 
         }   
     }
+    private void Damage()
+    {
+        StartCoroutine(WaitforActive());
+        _PlayerLives--;
+        _anims.HitAnim();
+        Health_Bar_Controller.Instance.UpdateLives_P1(_PlayerLives);
+    }
     private void OnTriggerEnter(Collider other)
     {
+        if (_IsDead == true)
+        {
+            return;
+        }
         if ((other.tag == "Hand" || other.tag == "Foot") && (Attack.Intance.PunchAttackp2 == true|| Attack.Intance.KickAttackp2 == true))
         {
-            _anims.HitAnim();
+            Damage();
         }
+    }
+    IEnumerator WaitforActive()
+    {
+        yield return new WaitForSeconds(1.5f);
     }
 }

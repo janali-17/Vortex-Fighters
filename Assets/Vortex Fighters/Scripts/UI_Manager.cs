@@ -19,6 +19,8 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     private Animator _animator;
 
+    
+
 
     private static UI_Manager _instance;
     public static UI_Manager Instance
@@ -73,4 +75,6 @@ public class UI_Manager : MonoBehaviour
         _animator.SetBool("_Pause_Panel", true);
         Time.timeScale = 0.0f;
     }
+
+   
 }
